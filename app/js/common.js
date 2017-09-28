@@ -17,8 +17,8 @@ $(document).ready(function(){
   	//autoWidth: true
   });
 
+var arr = $('.navigation a');
 
  });
 //Products carousel
-
 });
