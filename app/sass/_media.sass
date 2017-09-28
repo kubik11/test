@@ -10,13 +10,44 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-
-
+	header .top-line .top-line-right
+		max-width: 450px
+	header .top-line .top-line-right .navigation a
+		margin-right: 30px
+	main .chapters .chapters-item
+		margin-bottom: 30px 
+	.posts-left
+		margin-bottom: 60px 
+	footer .singup .button
+		padding: 10px 30px 
+	footer .singup .h2, footer .service .h2, footer .connect .h2
+		line-height: 1.2
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	footer
+		text-align: center
+	footer .singup
+		margin-bottom: 40px
 	/**/
-
-
+@media only screen and (max-width : 737px)
+	header .top-line .top-line-right
+		max-width: 383px
+@media only screen and (max-width : 700px)
+	header .top-line .top-line-right .navigation
+		display: none
+	header .top-line
+		display: flex
+	header .top-line .top-line-right
+		&::before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+	header .top-line .top-line-right .contact-us
+		display: inline-block
+		vertical-align: middle
+	header .top-line .top-line-left
+		margin-top: 0px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
