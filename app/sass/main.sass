@@ -51,7 +51,165 @@ body
 	max-width: 100%
 	height: auto
 
-p
-	font-family: $default-font
-	font-weight: bold
+header
+	position: relative
+	.top-line
+		padding: 20px 0px 28px 
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		z-index: 10
+		background-color: #fff
+		.top-line-left
+			float: left
+			max-width: 260px 
+			height: auto
+			margin-top: 15px
+			margin-left: 17px
+			a
+				display: block
+				img
+					width: 100%
+		.top-line-right
+			display: inline-block
+			float: right
+			max-width: 500px
+			text-align: right
+			.contact-us
+				padding: 9px 9px 9px 10px 
+				background-color: #1b7f9b
+				opacity: 0.6
+				display: inline-block
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					right: -12px
+					top: 0px
+					width: 13px 
+					height: 100%
+					background-color: #1b7f9b
+					opacity: 0.6	
+				&::after
+					content: ""
+					position: absolute
+					right: -13px
+					top: 5px
+					width: 13px 
+					height: 100%
+					background-color: #1b7f9b
+					opacity: 0.6
+					transform: skewY(-41deg)
+				ul
+					margin: 0
+					padding: 0
+					display: inline-block
+					li
+						list-style: none
+						display: inline-block
+						padding: 0px 9px
+						border-right: 1px solid #fff
+						&:last-child
+							padding-right: 0px 
+							border-right: none
+						&:first-child
+							padding-left: 0px
+						a
+							display: block
+							color: #fff
+							font-family: $default-font
+							font-weight: 400
+							font-size: 13px
+							line-height: 0.8
+							text-decoration: none
+				.fa
+					display: inline-block
+					margin-left: 70px
+					color: #fff
+					font-size: 17px
+			.navigation
+				display: inline-block
+				margin: 28px 17px 0px 0px 
+				a
+					display: inline-block
+					color: #668333
+					text-transform: uppercase
+					font-size: 15px
+					font-family: $default-font
+					font-weight: 400
+					transition: all 0.5s ease
+					margin-right: 59px
+					&:last-child
+						margin-right: 0px
+					&:hover
+						color: $accent
+						text-decoration: none
+/*slider*/
+.slider
+	.owl-carousel
+		position: relative
+		.slider-child
+			min-height: 518px
+			height: 518px
+			background-position: 50% 50%
+			background-size: cover
+			.slider-content
+				display: block
+				height: 100%
+				position: relative
+				p
+					position: absolute
+					left: 0px 
+					bottom: 40px 
+					padding: 15px 50px 15px 15px 
+					color: #fff
+					font-family: $default-font
+					font-size: 34px
+					line-height: auto
+					font-weight: 300
+					max-width: 460px 
+					background-color: rgba($accent, .6)
+					span
+						font-family: $default-font
+						font-size: 34px
+						font-weight: 400
+					strong
+						font-family: $default-font
+						font-size: 34px
+
+$colors: $accent, $green, $red //Создаем массив
+@for $i from 1 through length($colors) //Прогоняем через цыкл
+	.owl-item:nth-child(#{length($colors)}n+#{$i})
+		.slider-child
+			.slider-content	
+				p
+					background-color: nth($colors, $i)
+// Styling of chervons
+.slider
+	.owl-nav
+		position: absolute
+		top: 50%
+		left: 0px
+		width: 100%
+		transform: translateY(-50%)
+		.owl-prev
+			display: inline-block
+			left: 0px
+			width: 50%		
+			font-size: 60px
+			color: #FFF
+			.fa
+				padding: 24px 15px
+				background-color: rgba(#000, .6)
+		.owl-next
+			display: inline-block
+			text-align: right
+			right: 0px
+			width: 50%
+			font-size: 60px	
+			color: #FFF
+			.fa
+				padding: 24px 15px
+				background-color: rgba(#000, .6)
 @import "media" // Всегда в конце
