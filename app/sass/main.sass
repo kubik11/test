@@ -70,6 +70,25 @@ body
 .hamburger
 	display: none
 	float: left
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	background-color: $accent
+.newnav
+	display: block
+	flex: 1
+	a
+		display: block
+		flex: 1
+		text-align: center
+		padding: 20px 0px 
+		text-transform: uppercase
+		color: #668333
+		transition: all 0.5s ease
+		text-decoration: none
+		letter-spacing: 3px 
+		&:hover
+			color: $accent
+			background-color: rgba(#cdcdcd, .5)
+			letter-spacing: 2px 
 header
 	position: relative
 	.top-line

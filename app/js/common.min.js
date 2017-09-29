@@ -27,8 +27,33 @@ $(document).ready(function(){
    });
 //Products carousel
   resS();
-});
 
+ var $hamburger =  $('.hamburger');
+ $hamburger.on('click', clickBtn);
+
+ function clickBtn(){
+ 	if(!$(this).hasClass('is-active')){
+ 		$(this).addClass('is-active');
+ 		var $parrent = $('.top-line');	
+ 			if($('.navigation').hasClass('newnav')){
+ 				$('.newnav').css('display', 'block');
+ 			}else{
+ 				var $nav = $('.navigation').clone();
+ 				$nav.addClass('newnav');
+ 				$nav.appendTo($parrent);
+ 			}
+ 	}else{
+ 		$(this).removeClass('is-active');
+ 		$('.newnav').css('display', 'none');
+ 	}
+ }
+});
+// window.ckick = function(e){
+	// var targrt = e.target;
+	// if(!target.classList.contains('newnav')){
+		// clickBtn();
+	// }
+// }
 
 window.onresize = resS;
  // var currentHam = document.querySelector('.inner-top-line');
